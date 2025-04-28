@@ -1,0 +1,167 @@
+/* Reset Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Base */
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Azul escuro moderno */
+    color: #ecf0f1;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #0b3c5e, #042b45);
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.05), rgba(255,255,255,0));
+    pointer-events: none;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1.5px;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Main Content */
+main {
+    background: #ffffff;
+    color: #2c3e50;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    flex: 1;
+}
+
+/* Sections */
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #2980b9;
+    margin-bottom: 1rem;
+}
+
+section h3 {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-bottom: 0.8rem;
+}
+
+section p, section ul {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 0.6rem;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}
+
+/* Animations */
+header, main, footer {
+    animation: fadeIn 1.2s ease both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    header {
+        padding: 3rem 1.5rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section p, section ul {
+        font-size: 1rem;
+    }
+}
